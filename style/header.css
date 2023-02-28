@@ -1,0 +1,199 @@
+.header{
+    height: 55px;
+    display: flex;
+    flex-direction: row;/* default */
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0; 
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(209, 198, 198);
+    border-bottom-style: solid;
+   
+} 
+
+.left-section{
+    display: flex;
+    align-items: center;
+    
+}
+.hamburger-menu{
+    width: 25px;
+    margin-left: 25px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.youtube-logo{
+    width: 90px;
+    cursor: pointer;
+}
+  
+.middle-section{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 40px; 
+    max-width: 500px; /* limit the max width of stretching */
+}
+
+.search-bar{ /* div */
+    flex: 1;
+    height: 37px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: rgb(212, 212, 212);
+    border-style: solid;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+    width: 0; /* to make the search bar shrink */
+}
+
+.search-bar::placeholder{
+
+    font-family: Roboto, Arial;
+    font-size: 16px;
+}
+
+.search-button{ /* nested div */
+    height: 40px;
+    width: 65px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 212, 212);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: rgb(240, 240, 240);
+    margin-left: -1px; /* to get rid of the overlapping of borders */
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.search-button .tooltip, .voice-seacrh-button .tooltip{
+    position: absolute;
+    bottom: -44px;
+    background-color: gray;
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 10px 5px 10px 5px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none; /* when cursor hovers over the tooltip, it does nothing */
+}
+.search-button:hover .tooltip, .voice-seacrh-button:hover .tooltip{
+    opacity: 1;
+    white-space: nowrap;
+    
+}
+
+
+
+
+.search-button-menu{ /* icon image */
+    width: 22px;
+}
+
+
+.voice-seacrh-button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    background-color: rgb(245, 243, 243);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.voice-search-menu{/* icon */
+    width: 22px;  
+}
+
+
+.right-section{
+    width: 180px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0; /* make sure that the ride side of the header doesn't shrink */
+    margin-right: 15px;
+    
+    
+}
+.upload-container, .notification-icon-container{
+position: relative;
+}
+
+.upload-container .tooltip, .notification-icon-container .tooltip{
+    position: absolute;
+    bottom: -44px;
+    background-color: gray;
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 10px 5px 10px 5px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none; /* when cursor hovers over the tooltip, it does nothing */
+}
+
+.upload-container:hover .tooltip, .notification-icon-container:hover .tooltip{
+    opacity: 1;
+    white-space: nowrap;
+}
+
+
+.upload-icon{
+height: 25px;
+cursor: pointer;
+}
+
+.apps-icon{
+    height: 25px;
+    cursor: pointer;
+    }
+.notif-icon{
+    height: 25px;
+    cursor: pointer;
+    }
+
+.notification-icon-container{
+    position: relative;
+    /* background-color: green; */
+}
+.notification-counter{
+    position: absolute;
+    top: -1px;
+    right: -3px;
+    background-color: rgb(210, 30, 30);
+    color: white;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+    padding: 3px 4px 3px 3px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    
+}
+.current-user-pic{
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
